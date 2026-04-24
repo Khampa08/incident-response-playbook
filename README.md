@@ -29,19 +29,19 @@ To identify, analyze, contain, and recover from brute-force login attacks.
 ##  Splunk Screenshots
 <img width="1488" height="894" alt="Splunk" src="https://github.com/user-attachments/assets/f626ce33-5b81-4097-b20a-0b98ec108aa7" />
 
-## 📊 Detection & Analysis
+##  Detection & Analysis
 
-### 🔍 Raw Log Detection
+###  Raw Log Detection
 **Query:**
 index=main "Failed password"
 
-![Raw Logs](screenshots/raw_logs.png)
+![Raw Logs](screenshots/raw_logs.png.png)
 
 The logs show repeated failed login attempts.
 
 ---
 
-### 🧠 Attacker IP Analysis
+###  Attacker IP Analysis
 **Query:**
 index=main "Failed password"
 | rex "from (?<ip>\d+\.\d+\.\d+\.\d+)"
@@ -53,7 +53,7 @@ The IP 192.168.1.10 generated multiple login attempts, indicating suspicious beh
 
 ---
 
-### 📈 Attack Trend Over Time
+###  Attack Trend Over Time
 **Query:**
 index=main "Failed password"
 | timechart count
