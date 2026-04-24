@@ -41,7 +41,7 @@ To identify, analyze, contain, and recover from brute-force login attacks.
 ###   3. Attack Trend Over Time
 - Query: index=main "Failed password"
   | timechart count
-
+👉 [timechart](screenshots/timechart.png)
 
 
 ##  Skills Gained
