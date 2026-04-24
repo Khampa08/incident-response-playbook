@@ -29,19 +29,38 @@ To identify, analyze, contain, and recover from brute-force login attacks.
 ##  Splunk Screenshots
 <img width="1488" height="894" alt="Splunk" src="https://github.com/user-attachments/assets/f626ce33-5b81-4097-b20a-0b98ec108aa7" />
 
-##  Detection & Analysis
-###  1. Raw Log Detection
-- Query: index=main "Failed password"
-👉 [raw_logs](screenshots/raw_logs.png.png)
-###   2. Attacker IP Analysis
-- Query: index=main "Failed password"
-  | rex "from (?<ip>\d+\.\d+\.\d+\.\d+)"
-  | stats count by ip
-👉 [ip_analysis](screenshots/ip_analysis.png)
-###   3. Attack Trend Over Time
-- Query: index=main "Failed password"
-  | timechart count
-👉 [timechart](screenshots/timechart.png)
+## 📊 Detection & Analysis
+
+### 🔍 Raw Log Detection
+**Query:**
+index=main "Failed password"
+
+![Raw Logs](screenshots/raw_logs.png)
+
+The logs show repeated failed login attempts.
+
+---
+
+### 🧠 Attacker IP Analysis
+**Query:**
+index=main "Failed password"
+| rex "from (?<ip>\d+\.\d+\.\d+\.\d+)"
+| stats count by ip
+
+![IP Analysis](screenshots/ip_analysis.png)
+
+The IP 192.168.1.10 generated multiple login attempts, indicating suspicious behavior.
+
+---
+
+### 📈 Attack Trend Over Time
+**Query:**
+index=main "Failed password"
+| timechart count
+
+![Timechart](screenshots/timechart.png)
+
+This visualization shows spikes in failed login attempts over time.
 
 
 ##  Skills Gained
