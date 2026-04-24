@@ -32,12 +32,12 @@ To identify, analyze, contain, and recover from brute-force login attacks.
 ##  Detection & Analysis
 ###  1. Raw Log Detection
 - Query: index=main "Failed password"
-
+👉 [ip_analysis](screenshots/ip_analysis.png)
 ###   2. Attacker IP Analysis
 - Query: index=main "Failed password"
   | rex "from (?<ip>\d+\.\d+\.\d+\.\d+)"
   | stats count by ip
-
+👉 [ip_analysis](screenshots/ip_analysis.png)
 ###   3. Attack Trend Over Time
 - Query: index=main "Failed password"
   | timechart count
