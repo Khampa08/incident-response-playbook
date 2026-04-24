@@ -27,7 +27,8 @@ To identify, analyze, contain, and recover from brute-force login attacks.
 👉 [Brute Force Attack Playbook](playbooks/brute_force_attack.md)
 
 ## 📊 Screenshots
-(Add your Splunk screenshots here)
+<img width="1488" height="894" alt="Splunk" src="https://github.com/user-attachments/assets/f626ce33-5b81-4097-b20a-0b98ec108aa7" />
+
 
 ## 🧠 Skills Gained
 - Incident Response
