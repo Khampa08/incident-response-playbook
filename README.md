@@ -1,6 +1,6 @@
 # incident-response-playbook
 Incident Response Playbook for Brute Force Attack (SOC Analyst Project)
-# 🚨 Incident Response Playbook
+# Incident Response Playbook
 
 This repository contains an Incident Response Playbook for detecting and handling cybersecurity incidents.
 
