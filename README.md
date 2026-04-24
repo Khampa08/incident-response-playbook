@@ -32,16 +32,16 @@ To identify, analyze, contain, and recover from brute-force login attacks.
 ##  Detection & Analysis
 ###  1. Raw Log Detection
 - Query: index=main "Failed password"
-<img width="1142" height="895" alt="raw_logs png" src="https://github.com/user-attachments/assets/40b0246f-a83f-43ff-bbcd-8f64c72c9054" />
+
 ###   2. Attacker IP Analysis
 - Query: index=main "Failed password"
   | rex "from (?<ip>\d+\.\d+\.\d+\.\d+)"
   | stats count by ip
-<img width="1148" height="561" alt="ip_analysis" src="https://github.com/user-attachments/assets/ef7fb171-e55d-4f0a-b12d-69acc2af9fd0" />
+
 ###   3. Attack Trend Over Time
 - Query: index=main "Failed password"
   | timechart count
-<img width="1145" height="680" alt="timechart" src="https://github.com/user-attachments/assets/5b95f2a4-c3f8-4160-8b93-faa0dc64c438" />
+
 
 
 ##  Skills Gained
